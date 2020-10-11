@@ -21,3 +21,10 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+/.idea/
+/spring-security-basic/target/
+/spring-security-basic/spring-security-basic.iml
+/spring-security-ldap/target/
+/spring-security-jdbc/target/
+/spring-security-jdbc/spring-security-jdbc.iml
+/spring-security-ldap/spring-security-ldap.iml
