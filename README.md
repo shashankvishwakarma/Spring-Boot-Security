@@ -26,3 +26,20 @@ h2 console: http://localhost:8080/h2-console/
 - http://localhost:8080/admin
 - http://localhost:8080/logout
 ````
+
+### 4. Spring Security JPA
+````
+h2 console: http://localhost:8080/h2-console/
+- http://localhost:8080/
+- http://localhost:8080/user
+- http://localhost:8080/admin
+- http://localhost:8080/logout
+````
+
+### 5. Spring Security JWT
+````
+- http://localhost:8080/authenticate
+- http://localhost:8080/hello
+- http://localhost:8080/logout
+````
+
