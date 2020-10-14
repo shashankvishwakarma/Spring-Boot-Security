@@ -24,7 +24,12 @@ hs_err_pid*
 /.idea/
 /spring-security-basic/target/
 /spring-security-basic/spring-security-basic.iml
-/spring-security-ldap/target/
 /spring-security-jdbc/target/
 /spring-security-jdbc/spring-security-jdbc.iml
+/spring-security-jpa/target/
+/spring-security-jpa/spring-security-jpa.iml
+/spring-security-jwt/target/
+/spring-security-jwt/spring-security-jwt.iml
+/spring-security-ldap/target/
 /spring-security-ldap/spring-security-ldap.iml
+
