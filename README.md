@@ -38,8 +38,13 @@ h2 console: http://localhost:8080/h2-console/
 
 ### 5. Spring Security JWT
 ````
-- http://localhost:8080/authenticate
-- http://localhost:8080/hello
-- http://localhost:8080/logout
+curl http://localhost:8080/hello
+HTTP Response - {"timestamp":"2020-10-17T08:00:10.213+0000","status":403,"error":"Forbidden","message":"Access Denied","path":"/hello"}
+
+curl -i -H "Content-Type: application/json" -X POST -d "{\"username\": \"user\", \"password\": \"pass\"}' http://localhost:8080/authenticate
+HTTP Response - {"jwt":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwiZXhwIjoxNjAyOTU4Nzk4LCJpYXQiOjE2MDI5MjI3OTh9.ty4j6zwOC2ypQl6oXfQbLkDDc8s4Bhvusop3vbjeGtk"}
+
+curl -H "Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwiZXhwIjoxNjAyOTU4Nzk4LCJpYXQiOjE2MDI5MjI3OTh9.ty4j6zwOC2ypQl6oXfQbLkDDc8s4Bhvusop3vbjeGtk" http://localhost:8080/hello
+HTTP Response - Hello World
 ````
 
