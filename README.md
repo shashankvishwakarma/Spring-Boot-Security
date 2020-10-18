@@ -48,3 +48,17 @@ curl -H "Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwiZXhwIjox
 HTTP Response - Hello World
 ````
 
+### 6. Spring Security OAUTH2
+````
+curl http://localhost:8080/user
+HTTP Response - {"error":"unauthorized","error_description":"Full authentication is required to access this resource"}
+
+generate oauth access token
+curl -X POST -u "client-id:secret" -d "grant_type=password&username=user&password=pass&scope=trust" http://localhost:8080/oauth/token
+HTTP Response - {"access_token":"ef3bfd25-2dfd-4323-8a32-ae407b8a43ee","token_type":"bearer","refresh_token":"662405f8-978a-4bf6-be1f-2300924e8e3c","expires_in":3417,"scope":"trust"}
+
+curl http://localhost:8080/user -H "Authorization: Bearer ef3bfd25-2dfd-4323-8a32-ae407b8a43ee"
+HTTP Response - Hello User
+````
+
+### 7. Spring Security Kerberos
